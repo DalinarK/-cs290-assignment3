@@ -2,7 +2,7 @@
 * the \@param notation indicates an input paramater for a function. For example
 * @param {string} foobar - indicates the function should accept a string
 * and it should be called foobar, for example function(foobar){}
-* \@return is the value that should be returned
+* \@return is the value thats should be returned
 */
 
 /**
@@ -13,11 +13,15 @@
 */
 
 //your code here
-
+function uselessFunction()
+{
+	return null;
+}
 //end your code
 
 var bar = 'not a function';
 var barType = typeof bar;
+
 
 /**
 * Assign the above variable 'bar' to an anonymous function with the following
@@ -30,6 +34,25 @@ var barType = typeof bar;
 */
 
 //your code here
+bar = function(a)
+{
+	for (var i = 0; i < a.length; i++)
+	{
+		if (typeof a[i] != "number")
+		{
+			return false
+		}
+	}
+
+	for (var i = 0; i < a.length; i++)
+	{
+		a[i] = a[i] * 2;
+	}
+
+	return true;
+}
+
+
 
 //end your code
 
@@ -66,5 +89,38 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
+
+function parseGit(logArray)
+{
+
+	var arr = new Array (logArray.length);
+
+	for (var i = 0; i < logArray.length; i++)
+	{
+		//Defines the current string to be parsed.
+		parentString = logArray[i];
+
+		//filters out the hash.
+		var hashFilter = /(\w*)\s/;
+		var hashArray = hashFilter.exec(parentString);
+
+		//filters out the date
+		var dateFormattedFilter = /\w*\s\S*\s(\d*)\s(\w*)\s(\d*)\s(\S*)/
+		var dateArray = dateFormattedFilter.exec(parentString);
+
+		//puts it in a form that can be used by the date creation function.
+		var dateFormatted = dateArray[2] + " " + dateArray[1] + ", " + dateArray[3] + " " + dateArray[4];
+		var inputDate = new Date(dateFormatted);
+
+		//filters out the commit messages
+		var messageFilter = /"(.*)"/;
+		var messageArray = messageFilter.exec(parentString);
+
+		// adds the Gitlog to the array
+		arr[i] = new GitLog(hashArray[1], inputDate, messageArray[1]);
+	}
+	
+	return arr
+}
 
 //end your code
