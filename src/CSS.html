@@ -1,22 +1,27 @@
-/**
-* Create an object literal with the following key value pairs:
-* type: {string} 'Goldfish'
-* brand: {string} 'Pepperidge Farm'
-* flavor: {string} 'Cheddar'
-* count: {number} 2000
-* It should be returned directly by the following function
-* @return {object} - the object literal
-*/
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Sample document</title>
+  <link rel="stylesheet" href="style1.css">
+  </head>
 
-function returnObjectLiteral() {
-  //your code here
-  return {
-  	brand: "Pepperidge Farm",
-  	flavor: "Cheddar",
-  	count: 2000,
-  	type: "Goldfish"
-  };
-  //end your code
+<script language="JavaScript">
+
+var bar = 'not a function'
+
+var a = new Array(1, 65, 3);
+var b = "dogshit";
+
+bar = function (input)
+{
+  
+  for (var i = 0; i < input.length; i++)
+  {
+    a[i] = a[i] *2;
+    var output = a[i];
+    document.write(output);
+  }
 }
 
 /**
@@ -42,7 +47,8 @@ function returnObjectLiteral() {
 * received
 */
 
-//your code here
+
+
 function MessageLog(input)
 {
   this.user = input;
@@ -125,33 +131,55 @@ function MessageLog(input)
   
   };
 };
-//end your code
 
-/**
-* Add a method to the MessageLog prototype:
-* lastReceivedMessage() - returns the message text of the last message the user
-* received.
-*/
-//your code here
 
-MessageLog.prototype.lastReceivedMessage = function()
-  {
-    return this.callLogReceived[0];
-  };
+var object1 = new MessageLog("dogcatcar");
 
-//end your code
+object1.logMessage("one", 1);
 
-/**
-* Create an instance of a `MessageLog` for the user "BlackHatGuy". Have the
-* instance receive 3 messages: "foo", "bar" and "baz", received in that order.
-* Assign it to the variable myLog.
-*/
+object1.logMessage("two", 1);
 
-//your code here
+object1.logMessage("three", 1);
 
-var myLog = new MessageLog;
-myLog.logMessage("foo", 1);
-myLog.logMessage("bar", 1);
-myLog.logMessage("baz", 1);
+object1.logMessage("four", 1);
 
-//end your code
+object1.logMessage("five", 1);
+
+object1.logMessage("six", 1);
+
+document.write(object1.totalReceived());
+//document.write(object1.getSentMessage(4));
+
+
+// outputstring = object1.testa
+// document.write(outputstring);
+//messageLog.test;
+
+
+
+function GitLog(hash, date, message) {
+    this.hash = hash;
+    this.date = date;
+    this.message = message;
+}
+
+
+var test = new GitLog(" <br> end of program", 222, 333)
+
+var output = test["hash"];
+document.write(output);
+
+
+
+
+
+
+</script>
+  <body>
+    <p>
+      <strong>C</strong>ascading
+      <strong>S</strong>tyle
+      <strong>S</strong>heets
+    </p>
+  </body>
+</html>
