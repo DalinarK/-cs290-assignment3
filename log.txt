@@ -1,1 +1,11 @@
-You log goes in this  file.
+Start:Wed, 22 Apr 2015 10:17:05 -0700
+End: Wed, 22 Apr 2015 13:27:05 -0700
+Tasks: finished objects Added the test files, 
+
+Start:Sun, 19 Apr 2015 21:05:40 -0700
+End: Sun, 19 Apr 2015 23:51:16 -0700
+Tasks: Finished functions, finished variables
+
+Start: Sun, 12 Apr 2015 03:35:55 -0700
+End: Sun, 12 Apr 2015 03:54:42 -0700
+Tasks: initial commit set up git Modified TA account
